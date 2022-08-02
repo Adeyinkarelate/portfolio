@@ -1,0 +1,69 @@
+{% load static %}
+
+<div class="container px-4">
+    <h5 class="mb-4 text-center text-lg-start">My Projects</h5>
+    <div class="row gx-5">
+
+        {% for project in projects %}
+        <div class="col-md-4 col-sm-9 mx-auto mt-md-0 my-sm-4 project-container">
+            <div class=" bg-white project-box">
+                <div class="project-links d-flex p-2">
+                    <div class="project-link">
+                        <a href="{{project.project_url}}" target="_blank">
+                            <i class='bx bx-link-external bx-sm' ></i>
+                        </a>
+                    </div>                    
+                    <div class="project-link">                        
+                        <a href="{{project.project_github_link}}" target="_blank">
+                            <i class='bx bxl-github bx-sm'></i>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="project-img">
+                    <img src="{{project.project_image.url}}" class="img-fluid" alt="">
+                </div>
+                <div class="project-body p-3">
+                    <h5>{{project.project_name|truncatechars:20}}</h5>
+                    <p>{{project.project_details|truncatechars:110}}</p>
+                    <a href="{% url 'project-detail' project.slug %}" class="btn btn-sm btn-secondary">Read More</a>                        
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <nav class="mt-3 pagin">
+      <ul class="pagination">
+         {% if projects.has_previous %}
+            <li class="page-item">
+               <a href="?page={{ projects.previous_page_number }}" class="page-link">Previous</a>
+            </li>
+         {% else %}
+            <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+         {% endif %}
+
+         {% for i in projects.paginator.page_range %}
+         {% if projects.number == i %}
+            <li class="page-item active" aria-current="page" >
+               <a class="page-link" href="">{{ i }}</a>
+            </li>
+         {% else %}
+            <li class="page-item">
+               <a href="?page={{ i }}" class="page-link">{{ i }}</a>
+            </li>
+         {% endif %}
+         {% endfor %}
+
+         {% if projects.has_next %}
+            <li class="page-item">
+               <a href="?page={{ projects.next_page_number }}" class="page-link">Next</a>
+            </li>
+         {% else %}
+            <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+         {% endif %}
+
+      </ul>
+   </nav>
+
+</div>

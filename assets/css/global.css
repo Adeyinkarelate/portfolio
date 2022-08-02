@@ -1,0 +1,176 @@
+* {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-family: poppins;
+}
+
+p,
+li,
+small,
+a , button{
+  font-family: "Baloo 2", cursive;
+  font-family: Quicksand;
+}
+
+:root {
+  --red-shade: #990011;
+  --dim-white: #f1f4ff;
+}
+
+body {
+  background-color: #fff;
+}
+
+.navbar {
+  background-color: var(--dim-white);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 2px 0px;
+}
+
+.navbar-brand {
+  color: var(--red-shade) !important;
+  font-weight: 600;
+  font-family: "Alegreya Sans", sans-serif;
+  font-family: poppins;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--red-shade) !important;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 
+FONTS
+  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Baloo 2', cursive;
+
+*/
+
+
+/* Start Home Section */
+#home {
+  height: 70vh;
+  scroll-margin-top: 60px;
+  background-color: #333;  
+  background-image: linear-gradient(
+      62deg,
+      rgba(234, 88, 12, 0.9) 5%,
+      rgba(153, 0, 17, 0.7) 80%
+    ),
+    url("/static/img/hero_bg.jpg");
+}
+
+.intro-section {
+  color: #f1f4ff;
+}
+.intro-section p {
+  font-weight: 500;
+}
+/* End Home Section */
+
+
+/* Start About Section */
+
+#about {
+  margin-top: 22vh;
+  scroll-margin-top: 100px;
+}
+
+.about-left {
+  height: 75vh;
+  background: linear-gradient(
+    62deg,
+    rgba(234, 88, 12, 0.9) 5%,
+    rgba(153, 0, 17, 0.7) 80%
+  );
+  border-radius: 10px;
+}
+
+.about-right {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.about-text{
+  text-align: justify;
+}
+/* End About Section */
+
+
+/* Start Services Section */
+
+#services{
+  margin-top: 20vh;  
+  scroll-margin-top: 80px;
+  /* background-color: #444; */
+  padding: 50px 0 ;  
+}
+.service-box{
+  /* height: 40vh; */
+  background-color: var(--dim-white);  
+  text-align: center;
+}
+.icon-box{
+  width: 70px;
+  height: 70px;
+  background-color: #990011;
+  /* position: relative !important;  */
+  /* margin-top: -50px !important;   */
+
+}
+@media screen and (max-width: 768px) {
+  .service-container{
+    margin: 45px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .service-container{
+    width: 90%;
+  }
+}
+/* End Services Section */
+
+/* Start Projects Section */
+
+#projects{
+  margin-top: 10vh;
+  scroll-margin-top: 80px;
+  width: auto;
+  background-color: var(--dim-white);  
+  padding: 50px 0 ;
+}
+
+.project-links{
+  justify-content: space-between;
+}
+
+.project-link{
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+}
+
+@media screen and (max-width: 575px) {
+  .project-container{
+    margin: 20px 0;
+  }
+}
+
+/* End Projects Section */

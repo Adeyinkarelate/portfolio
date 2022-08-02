@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}PortFolio{% endblock title %}
+{% block main %}
+
+ <section id="home" >
+    <div class="container px-2 overflow-hidden">
+        <div class="row gx-5 ">
+            <div class="col-md-6 col-sm-10 mt-5">
+                <div class="p-3 mt-5 intro-section">
+                    <h1 id="name">Hi I'm Tom Dingle</h1>
+                    <p class="h5">Frontend Developer, Yahoo Boy Extreme</p>
+                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore illo nulla, perspiciatis impedit fuga quae!</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-10 mt-4">
+                <div class="p-3 w-75 ms-auto">
+                    <img src="{% static 'img/typing-bro.png' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<section id="about">
+    <div class="container px-2"overflow-hidden>
+        <div class="row gx-5">
+            <div class="col-md-6 col-sm-10 mx-auto">
+                <div class="w-75 mx-auto about-left">
+                    
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-10 mx-auto">
+                <div class="p-2 px-3 about-right rounded-3">
+                    <h2>About Me</h1>
+                    <small class="h6"> &#9880; Brief history of me.</small>
+                    <p class="mt-3 about-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dolorum culpa sed quo nesciunt illum aliquam asperiores dolore, 
+                        odit fuga facilis! Dolorum culpa sed quo nesciunt illum aliquam 
+                        asperiores dolore, odit fuga facilis!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.                         
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            &#10087; <span class="fw-bold">Name:</span> Tom Dingle
+                        </li>
+                        <li class="list-group-item">
+                            &#10087; <span class="fw-bold">Date of birth:</span> 
+                            12<sup>th</sup> August 2022
+                        </li>
+                        <li class="list-group-item">
+                            &#10087; <span class="fw-bold">Address:</span>
+                            24, Soka Street Ibadan
+                        </li>
+                        <li class="list-group-item">
+                            &#10087; <span class="fw-bold">Email:</span> 
+                            tomdingle@yahoo.com
+                        </li>
+                        <li class="list-group-item">
+                            &#10087; <span class="fw-bold">Phone:</span> 
+                            +234 901 8766 795
+                        </li>
+                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<section id="services">
+    <div class="container px-3 overflow-hidden">
+        <div class="row gx-5">
+            <div class="col-md-4 col-sm-8 mx-auto  service-container">
+                <div class="p-3  rounded-3 service-box">
+                    <div class="icon-box rounded-circle bg-white mx-auto mb-4">
+                        <img src="{% static 'img/ui_ux_design.png' %}" alt="" class="img-fluid w-75 mt-2">
+                    </div>
+                    <h4>UI & UX Design</h3>
+                    <p class="mt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates consequuntur beatae eveniet repellat saepe.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-8 mx-auto  service-container">
+                <div class="p-3  rounded-3 service-box">
+                    <div class="icon-box rounded-circle bg-white mx-auto mb-4">
+                        <img src="{% static 'img/web-development.png' %}" alt="" class="img-fluid w-75 mt-3">
+                    </div>
+                    <h4>Web Development</h3>
+                    <p class="mt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates consequuntur beatae eveniet repellat saepe.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-8 mx-auto  service-container">
+                <div class="p-3  rounded-3 service-box">
+                    <div class="icon-box rounded-circle bg-white mx-auto mb-4">
+                        <img src="{% static 'img/mobile-development.png' %}" alt="" class="img-fluid w-75 mt-2">
+                    </div>
+                    <h4>Mobile App Development</h3>
+                    <p class="mt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates consequuntur beatae eveniet repellat saepe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    {% include 'portfolio/projects.html' %}
+</section> 
+
+{% endblock%}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}PortFolio{% endblock title %}
+{% block main %}
+
+
+<div class="container p-4 mt-5 bg-light shadow-sm rounded">
+   <div class="row gx-4">
+      <div class="col-md-5 mt-md-0 ">
+         <div class="p-2 project-detail-img">
+            <img src="{{project.project_image.url}}" class="img-fluid" alt="">
+         </div>
+      </div>
+      <div class="col-md-7 mt-md-0 mt-sm-4">
+         <div class="p-3 project-detail-text">
+            <h4>{{project.project_name}}</h4>
+            <small class="mb-3 fw-bold">{{project.time_created}}</small>
+            <p>
+               {{project.project_details}}
+            </p>
+            <div class="project-detail-link">
+               <a href="{{project.project_url}}" target="_blank" class="me-2 text-decoration-none fw-bold">Project Url</a>
+               <a href="{{project.project_github_link}}" target="_blank" class="mx-2 text-decoration-none fw-bold">Github Link</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+{% endblock %}
